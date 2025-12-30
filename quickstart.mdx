@@ -1,0 +1,126 @@
+---
+title: Quickstart Guide
+description: Get started with Glitch by setting up your account and creating your first documentation space in minutes.
+---
+
+## Get Started in Minutes
+
+Follow these steps to create your Glitch account, set up a documentation space, and add your first documents. You will have a fully functional docs site running in under 5 minutes.
+
+<Callout kind="info">
+
+**Prerequisites:**
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- No prior setup required – everything runs in the browser
+
+</Callout>
+
+## Create Your Account and First Space
+
+Use these sequential steps to sign up and launch your documentation space.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://glitch.com/signup` and create your account.
+
+    Enter your email and choose a secure password. Glitch sends a verification link immediately.
+
+    ```bash
+    # Optional: Use CLI for teams
+    npx glitch-cli signup --email your-email@example.com
+    ```
+  </Step>
+
+  <Step title="Create Documentation Space" icon="plus">
+    From the dashboard at `https://dashboard.glitch.com`, click **New Space**.
+
+    Select **Documentation** template. Name it `my-project-docs`.
+
+    Your space deploys automatically to a URL like `https://my-project-docs.glitch-docs.com`.
+  </Step>
+
+  <Step title="Verify Deployment" icon="check-circle">
+    Click the live preview link. You see the default welcome page.
+
+    Note the space ID: `sp_abc123def456` (found in settings).
+  </Step>
+</Steps>
+
+## Add and Organize Your First Documents
+
+Glitch supports MDX for rich documentation. Start by adding pages.
+
+<Tabs>
+  <Tab title="Web Editor" icon="edit-3">
+    In your space, click **New Document** > **MDX Page**.
+
+    Use the visual editor or switch to code mode. Save to auto-deploy.
+  </Tab>
+
+  <Tab title="Upload Markdown" icon="upload">
+    Drag and drop `.mdx` files into the file tree.
+
+    Organize in folders: `/guides/`, `/api/`, `/changelog.mdx`.
+  </Tab>
+</Tabs>
+
+Here is a sample frontmatter for your first page:
+
+<CodeGroup tabs="MDX Frontmatter">
+  ```mdx
+  ---
+  title: My First Guide
+  description: Learn the basics.
+  ---
+
+  ## Welcome
+
+  Content here.
+  ```
+</CodeGroup>
+
+## Basic Navigation and Editing
+
+Navigate via the sidebar. Edit pages directly – changes publish live.
+
+<Columns cols={2}>
+  <Card title="Navigation" icon="menu" href="#navigation">
+    Sidebar shows pages, search, and settings.
+  </Card>
+
+  <Card title="Editing Tips" icon="edit" href="#editing">
+    Use real-time preview. Components like `<Callout>` render instantly.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced: API Integration" default-open="false">
+  Fetch space data via API:
+
+  ```javascript
+  const response = await fetch('https://api.example.com/spaces/sp_abc123def456', {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  const space = await response.json();
+  ```
+</Expandable>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Explore Glitch features in depth.
+  </Card>
+
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys.
+  </Card>
+
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    See recent updates.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Bookmark your space dashboard. Invite team members via the **Share** button to collaborate.
+</Callout>

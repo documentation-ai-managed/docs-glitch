@@ -1,0 +1,103 @@
+---
+title: Introduction to Glitch
+description: Discover Glitch, your default documentation space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+Glitch provides your default documentation space to organize and manage all project documentation effortlessly. You create structured docs using MDX, collaborate with teams, and publish professional documentation sites. Start building your knowledge base today with intuitive tools that scale with your projects.
+
+<Callout kind="info">
+Glitch supports real-time editing and version history for seamless team workflows.
+</Callout>
+
+## Key Features
+
+Glitch offers powerful features tailored for documentation management.
+
+<Columns cols={3}>
+  <Card title="MDX-Powered Editing" icon="code" href="#mdx-editing">
+    Write rich documentation with MDX components, code blocks, and interactive elements.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration">
+    Invite team members, assign roles, and track changes in real-time.
+  </Card>
+  <Card title="Custom Publishing" icon="globe" href="#publishing">
+    Deploy static sites with custom domains and SEO optimization.
+  </Card>
+</Columns>
+
+## Benefits for Teams and Projects
+
+You streamline documentation workflows, reducing onboarding time by up to 50%. Teams access centralized knowledge, minimizing errors and improving consistency. Projects benefit from version control, searchability, and integrations that keep docs always up-to-date.
+
+<Tabs>
+  <Tab title="Teams" icon="users">
+    Share docs securely and collaborate without version conflicts.
+  </Tab>
+  <Tab title="Projects" icon="package">
+    Embed code examples and API references directly in your docs.
+  </Tab>
+</Tabs>
+
+## Quick Start
+
+Get started with Glitch in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://glitch.com` with your email or GitHub account.
+  </Step>
+  <Step title="New Doc Space" icon="plus">
+    Click "New Space" and choose a template for your project.
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Edit pages using the MDX editor and preview changes live.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Deploy your site with one click and share the URL.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Example: Embed Glitch docs in your app
+  import { GlitchDocs } from '@glitch/docs-sdk';
+
+  const docs = new GlitchDocs({ apiKey: 'YOUR_API_KEY' });
+  docs.render('#my-container', { spaceId: 'your-space-id' });
+  ```
+  ```python
+  # Example: Fetch Glitch docs via API
+  import requests
+
+  response = requests.get(
+    'https://api.glitch.com/spaces/your-space-id/docs',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'}
+  )
+  print(response.json())
+  ```
+</CodeGroup>
+
+## Quick Navigation
+
+Explore core sections to dive deeper.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first documentation space.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and roles.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize themes and layouts.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Track updates and new features.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Ready to build? Head to the [Quickstart Guide](/quickstart) for hands-on setup.
+</Callout>
